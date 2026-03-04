@@ -6,8 +6,8 @@ pipeline {
         AWS_REGION = "ap-south-1"
         ECR_REGISTRY = "410003306855.dkr.ecr.ap-south-1.amazonaws.com"
 
-        BACKEND_REPO = "priyanka623/backend"
-        FRONTEND_REPO = "priyanka623/frontend"
+        BACKEND_REPO = "priyanka623/dotnet-backend"
+        FRONTEND_REPO = "priyanka623/static-frontendfrontend"
 
         IMAGE_TAG = "latest"
 
@@ -81,8 +81,8 @@ pipeline {
         kubectl apply -f k8s/frontend-deployment.yaml
         kubectl apply -f k8s/frontend-service.yaml
 
-        kubectl set image deployment/backend backend=${BACKEND_IMAGE}
-        kubectl set image deployment/frontend frontend=${FRONTEND_IMAGE}
+        kubectl set image deployment/dotnet-backend dotnet-backend=${BACKEND_IMAGE}
+        kubectl set image deployment/static-frontend static-frontend=${FRONTEND_IMAGE}
 
         kubectl rollout status deployment/backend
         kubectl rollout status deployment/frontend
