@@ -7,7 +7,7 @@ pipeline {
         ECR_REGISTRY = "410003306855.dkr.ecr.ap-south-1.amazonaws.com"
 
         BACKEND_REPO = "priyanka623/dotnet-backend"
-        FRONTEND_REPO = "priyanka623/static-frontendfrontend"
+        FRONTEND_REPO = "priyanka623/static-frontend"
 
         IMAGE_TAG = "latest"
 
